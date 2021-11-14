@@ -1,5 +1,7 @@
 const CACHE_STATIC = 'static-v1';
 const CACHE_INMUTABLE = 'inmutable-v1';
+const url = '/FGA-20213-PWA-U2-P7/'
+
 
 self.addEventListener('install',(event)=>{
     console.log('SW instalado :D');
@@ -7,18 +9,18 @@ self.addEventListener('install',(event)=>{
     const cacheStatic = caches.open(CACHE_STATIC)
     .then(cache=>{
         cache.addAll([
-            './',
-            './index.html',
-            './manifest.json',
-            './images/user.png',
-            './js/camera.js',
-            './js/app.js',
-            './images/icons/android-launchericon-48-48.png',
-            './images/icons/android-launchericon-72-72.png',
-            './images/icons/android-launchericon-96-96.png',
-            './images/icons/android-launchericon-144-144.png',
-            './images/icons/android-launchericon-192-192.png',
-            './images/icons/android-launchericon-512-512.png'
+            `${url}`,
+            `${url}index.html`,
+            `${url}manifest.json`,
+            `${url}images/user.png`,
+            `${url}js/camera.js`,
+            `${url}js/app.js`,
+            `${url}images/icons/android-launchericon-48-48.png`,
+            `${url}images/icons/android-launchericon-72-72.png`,
+            `${url}images/icons/android-launchericon-96-96.png`,
+            `${url}images/icons/android-launchericon-144-144.png`,
+            `${url}images/icons/android-launchericon-192-192.png`,
+            `${url}images/icons/android-launchericon-512-512.png`
         ]);
     });
 

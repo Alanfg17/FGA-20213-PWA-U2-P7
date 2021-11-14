@@ -1,4 +1,4 @@
-let contextSW = '/sw.js';
+let contextSW = '/FGA-20213-PWA-U2-P7/sw.js';
 let url = window.location.href;
 
 let player = $('#player')
@@ -54,5 +54,6 @@ if (navigator.serviceWorker) {
     if (url.includes('localhost')) {
         contextSW = '/sw.js';
     }
+    
     navigator.serviceWorker.register(contextSW);
 }
